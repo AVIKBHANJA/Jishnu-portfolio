@@ -58,8 +58,8 @@ export const HeroSection = () => {
           delay: 0.6
         }} className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 leading-relaxed">
             Fusing scientific rigor with innovative vision — exploring the frontiers of{" "}
-            <span className="text-primary font-medium">stem cell biology</span>,{" "}
-            <span className="text-primary font-medium">iPSC reprogramming</span>, and{" "}
+            <span className="text-primary font-medium">embryonic</span>,{" "}
+            <span className="text-primary font-medium">Induced pluripotent stem cell research</span>, and{" "}
             <span className="text-primary font-medium">translational health</span>.
           </motion.p>
 
@@ -85,16 +85,21 @@ export const HeroSection = () => {
           duration: 0.6,
           delay: 1
         }} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground gap-2 px-8" onClick={() => document.querySelector("#education")?.scrollIntoView({
+            behavior: "smooth"
+          })}>Education 
+              
+            </Button>
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2 px-8" onClick={() => document.querySelector("#publications")?.scrollIntoView({
             behavior: "smooth"
           })}>
               <FileText size={18} />
-              View Research
+             Research & Skills
             </Button>
             <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground gap-2 px-8" onClick={() => document.querySelector("#skills")?.scrollIntoView({
             behavior: "smooth"
           })}>
-              Skills & Expertise
+              Study abroad helpdesk
             </Button>
           </motion.div>
 
