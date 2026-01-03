@@ -23,7 +23,7 @@ const referees: Referee[] = [
       "Former Postdoctoral Research Associate, Department of Molecular Genetics, Albert Einstein College of Medicine, Bronx, USA"
     ],
     email: "pirity@brc.hu",
-    image: "/placeholder.svg"
+    image: "/assets/Melinda K.jpg"
   },
   {
     name: "Prof. (Dr.) Koustubh Panda",
@@ -34,7 +34,7 @@ const referees: Referee[] = [
       "Former Assistant Professor: Department of Immunology & Pathobiology, Lerner Research Institute, Cleveland Clinic Foundation, USA"
     ],
     email: "kpbcg@caluniv.ac.in",
-    image: "/placeholder.svg"
+    image: "/assets/Koustubh Panda.jpg"
   },
   {
     name: "Prof. (Dr.) Nandan Kumar Jana",
@@ -46,7 +46,7 @@ const referees: Referee[] = [
       "Post Doc. (UCONN Health-Centre, Farmington, CT, and UNC at Chapel Hill, NC, USA)"
     ],
     email: "nandankumar.jana@heritageit.edu",
-    image: "/placeholder.svg"
+    image: "/assets/Nandan Kumar Jana.JPG"
   },
   {
     name: "Prof. (Dr.) Malavika Bhattacharya",
@@ -58,7 +58,7 @@ const referees: Referee[] = [
       "Former Post Doc. fellow of University of Pennsylvania, USA"
     ],
     email: "malavika.b@technoindiaeducation.com",
-    image: "/placeholder.svg"
+    image: "/assets/Malavika-Bhattacharya.webp"
   },
   {
     name: "Dr. Sirshendu Chatterjee",
@@ -69,7 +69,7 @@ const referees: Referee[] = [
       "Ex-Scientist (Analytical Biochemist), Quality Control Lab, Tea Board of India"
     ],
     email: "sirshendu.chatterjee@gmail.com",
-    image: "/placeholder.svg"
+    image: "/assets/Sirshendu Chatterjee.jpeg"
   }
 ];
 
