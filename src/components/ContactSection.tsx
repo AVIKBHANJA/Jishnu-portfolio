@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, Linkedin, MapPin, Phone, Download } from "lucide-react";
+import { Mail, Linkedin, MapPin, Phone, Download, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const contactInfo = [
@@ -49,7 +49,7 @@ export const ContactSection = () => {
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
+         
             {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -95,51 +95,41 @@ export const ContactSection = () => {
               </div>
             </motion.div>
 
-            {/* CTA */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col justify-center"
-            >
-              <div className="bg-card-gradient rounded-xl p-8 shadow-card text-center">
-                <h3 className="font-serif text-2xl font-semibold text-foreground mb-4">
-                  Interested in Collaboration?
-                </h3>
-                <p className="text-muted-foreground mb-6">
-                  I'm always open to discussing new research opportunities, collaborations, or just connecting with fellow scientists.
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button
-                    size="lg"
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2"
-                    asChild
-                  >
-                    <a href="mailto:jishnusarathi@gmail.com">
-                      <Mail size={18} />
-                      Send Email
-                    </a>
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground gap-2"
-                    asChild
-                  >
-                    <a
-                      href="https://www.linkedin.com/in/jishnu-sarathi-deb-016844214"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Linkedin size={18} />
-                      LinkedIn
-                    </a>
-                  </Button>
-                </div>
+            
+          {/* Additional Links */}
+            <div>
+              <h4 className="font-display text-lg md:text-xl font-medium text-foreground mb-3 md:mb-4">
+                Follow
+              </h4>
+              <div className="flex flex-wrap gap-2 md:gap-3">
+                <a
+                  href="/assets/DIpanjali_Ray.pdf"
+                  download
+                  className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-full bg-primary text-primary-foreground hover:opacity-90 transition-all font-body text-xs md:text-sm"
+                >
+                  <Download className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                  Download Resume
+                </a>
+                <a
+                  href="https://www.instagram.com/dipanjaliray2004/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-full bg-card border border-border hover:border-primary/30 hover:bg-primary/5 transition-all font-body text-xs md:text-sm text-muted-foreground hover:text-primary"
+                >
+                  <Instagram className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                  Instagram
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/dipanjali-ray"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-full bg-card border border-border hover:border-primary/30 hover:bg-primary/5 transition-all font-body text-xs md:text-sm text-muted-foreground hover:text-primary"
+                >
+                  <Linkedin className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                  LinkedIn
+                </a>
               </div>
-            </motion.div>
-          </div>
+            </div>
         </div>
       </div>
     </section>
