@@ -54,42 +54,6 @@ const skillCategories = [
   },
 ];
 
-const studyAbroadGuide = [
-  {
-    number: "1",
-    title: "How to find a prospective supervisor?",
-    subItems: ["1.1. How to send Cold Emails?"],
-  },
-  {
-    number: "2",
-    title: "Creating CV guidelines",
-  },
-  {
-    number: "3",
-    title: "English language proficiency certificate",
-  },
-  {
-    number: "4",
-    title: "How can you seek an application fee waiver?",
-  },
-  {
-    number: "5",
-    title: "How to apply?",
-  },
-  {
-    number: "6",
-    title: "How to write a Motivation letter?",
-  },
-  {
-    number: "7",
-    title: "How to find a research gap?",
-  },
-  {
-    number: "8",
-    title: "How to write a Research proposal (for PhD)",
-  },
-];
-
 const softSkills = [
   {
     icon: GraduationCap,
@@ -170,47 +134,34 @@ export const SkillsSection = () => {
             ))}
           </div>
 
-          {/* Study Abroad Helpdesk & Languages */}
+          {/* Soft Skills & Languages */}
           <div className="grid lg:grid-cols-3 gap-8">
-            {/* Study Abroad Helpdesk */}
+            {/* Soft Skills */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.5 }}
               className="lg:col-span-2"
             >
-              <h3 className="font-serif text-2xl font-bold text-foreground mb-6">
-                Study Abroad Helpdesk
+              <h3 className="font-serif text-xl font-semibold text-foreground mb-6">
+                Professional Skills
               </h3>
               <div className="grid sm:grid-cols-2 gap-4">
-                {studyAbroadGuide.map((item) => (
+                {softSkills.map((skill) => (
                   <div
-                    key={item.number}
-                    className="p-4 rounded-lg bg-card shadow-soft"
+                    key={skill.title}
+                    className="flex items-start gap-3 p-4 rounded-lg bg-card shadow-soft"
                   >
-                    <div className="flex gap-3">
-                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
-                        <span className="text-sm font-semibold text-primary">
-                          {item.number}
-                        </span>
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-foreground text-lg">
-                          {item.title}
-                        </h4>
-                        {item.subItems && (
-                          <ul className="mt-2 space-y-1 ml-2">
-                            {item.subItems.map((subItem, idx) => (
-                              <li
-                                key={idx}
-                                className="text-xs text-muted-foreground pl-2 border-l border-accent/30"
-                              >
-                                {subItem}
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </div>
+                    <div className="p-2 rounded-lg bg-accent/10">
+                      <skill.icon size={18} className="text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-foreground text-sm">
+                        {skill.title}
+                      </h4>
+                      <p className="text-xs text-muted-foreground mt-1">
+                        {skill.description}
+                      </p>
                     </div>
                   </div>
                 ))}

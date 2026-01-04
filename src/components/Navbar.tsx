@@ -18,8 +18,8 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return document.documentElement.classList.contains('dark');
+    if (typeof window !== "undefined") {
+      return document.documentElement.classList.contains("dark");
     }
     return false;
   });
@@ -37,26 +37,28 @@ export const Navbar = () => {
   const toggleDarkMode = () => {
     const newIsDark = !isDark;
     setIsDark(newIsDark);
-    document.documentElement.classList.toggle('dark', newIsDark);
-    localStorage.setItem('theme', newIsDark ? 'dark' : 'light');
+    document.documentElement.classList.toggle("dark", newIsDark);
+    localStorage.setItem("theme", newIsDark ? "dark" : "light");
   };
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const shouldBeDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    const shouldBeDark = savedTheme === "dark" || (!savedTheme && prefersDark);
     setIsDark(shouldBeDark);
-    document.documentElement.classList.toggle('dark', shouldBeDark);
+    document.documentElement.classList.toggle("dark", shouldBeDark);
   }, []);
 
   const handleNavClick = (link: { href: string; isPage?: boolean }) => {
     setIsMobileMenuOpen(false);
-    
+
     if (link.isPage) {
       navigate(link.href);
     } else {
-      if (location.pathname !== '/') {
-        navigate('/');
+      if (location.pathname !== "/") {
+        navigate("/");
         setTimeout(() => {
           const element = document.querySelector(link.href);
           if (element) {
@@ -85,13 +87,19 @@ export const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <motion.a
-            href="#"
-            className="font-serif text-2xl font-semibold text-foreground"
+          <motion.button
+            onClick={() => {
+              if (location.pathname !== "/") {
+                navigate("/");
+              } else {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+            className="font-serif text-2xl font-semibold text-foreground cursor-pointer"
             whileHover={{ scale: 1.02 }}
           >
             Jishnu.
-          </motion.a>
+          </motion.button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
