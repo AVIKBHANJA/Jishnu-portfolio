@@ -170,7 +170,7 @@ export const SkillsSection = () => {
             ))}
           </div>
 
-          {/* Soft Skills & Languages */}
+          {/* Study Abroad Helpdesk & Languages */}
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Study Abroad Helpdesk */}
             <motion.div

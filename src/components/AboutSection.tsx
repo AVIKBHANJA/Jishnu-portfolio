@@ -65,7 +65,7 @@ export const AboutSection = () => {
 understanding the pattern of embryonic development, stem cell Biology and regenerative
 medicine. Here, I acquired ideas about the 3D Gastruloid model, generating iPSC by
 reprogramming and several techniques related to molecular biology.
-Previously, I worked on oxidised stress, Lung damage, inflammation and the role of Vitamins.
+Previously, I worked on oxidative stress, Lung damage, inflammation and the role of Vitamins.
           </motion.p>
 
           {/* Stats */}
