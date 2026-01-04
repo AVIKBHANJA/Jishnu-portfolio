@@ -42,7 +42,8 @@ const certificates = [
     description: "M.Sc & B.Sc in Biotechnology and Zoology",
     image: null,
     pdf: "/assets/MSc and BSc Degree.pdf",
-  },  {
+  },
+  {
     title: "GATE BT 2025 Qualification",
     issuer: "IIT Roorkee / GATE",
     year: "2025",
@@ -65,7 +66,7 @@ const certificates = [
     description: "Certificate from Prof. Koustubh Panda",
     image: null,
     pdf: "/assets/Koustubh Panda Certificate.pdf",
-  }
+  },
 ];
 
 export const CertificatesSection = () => {
@@ -115,7 +116,7 @@ export const CertificatesSection = () => {
         </motion.div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {certificates.map((cert, index) => (
               <motion.div
                 key={cert.title}
