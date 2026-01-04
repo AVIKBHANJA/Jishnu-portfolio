@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
 import {
   ArrowDown,
-  Linkedin,
-  Mail,
   FileText,
   GraduationCap,
   Users,
   Book,
+  Download,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -21,6 +20,15 @@ export const HeroSection = () => {
         behavior: "smooth",
       });
     }
+  };
+
+  const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/assets/Jishnu_Sarathi_Europass_CV.pdf";
+    link.download = "Jishnu_Sarathi_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient dark:bg-background">
@@ -179,7 +187,7 @@ export const HeroSection = () => {
             </Button>
           </motion.div>
 
-          {/* Social Links */}
+          {/* Resume Download */}
           <motion.div
             initial={{
               opacity: 0,
@@ -191,28 +199,17 @@ export const HeroSection = () => {
               duration: 0.6,
               delay: 1.2,
             }}
-            className="flex items-center justify-center gap-4 mb-24 md:mb-12"
+            className="flex items-center justify-center mb-24 md:mb-12"
           >
-            <a
-              href="https://www.linkedin.com/in/jishnu-sarathi-deb-016844214"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-full border border-border hover:border-primary hover:bg-primary/5 transition-all duration-200"
+            <Button
+              size="lg"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground gap-2 px-8 font-semibold transition-all duration-300"
+              variant="outline"
+              onClick={downloadResume}
             >
-              <Linkedin
-                size={20}
-                className="text-muted-foreground hover:text-primary"
-              />
-            </a>
-            <a
-              href="mailto:jishnusarathi@gmail.com"
-              className="p-3 rounded-full border border-border hover:border-primary hover:bg-primary/5 transition-all duration-200"
-            >
-              <Mail
-                size={20}
-                className="text-muted-foreground hover:text-primary"
-              />
-            </a>
+              <Download size={20} />
+              Download Resume
+            </Button>
           </motion.div>
         </div>
       </div>
