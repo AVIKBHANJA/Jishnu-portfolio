@@ -99,47 +99,30 @@ export const CertificatesSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                className="bg-card rounded-xl overflow-hidden shadow-soft hover:shadow-card transition-all duration-300 border border-transparent dark:border-border"
+                className="bg-card rounded-xl p-6 shadow-soft hover:shadow-card transition-all duration-300 border border-transparent dark:border-border"
               >
-                {/* Certificate Preview */}
-                <div className="relative h-48 bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/5 dark:to-accent/5 flex items-center justify-center">
-                  {cert.image ? (
-                    <img
-                      src={cert.image}
-                      alt={cert.title}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <Award size={64} className="text-primary/40" />
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                {/* Certificate Icon */}
+                <div className="mb-4 inline-flex p-3 rounded-lg bg-primary/10">
+                  <Award size={24} className="text-primary" />
                 </div>
 
                 {/* Certificate Info */}
-                <div className="p-6">
-                  <div className="flex items-start gap-2 mb-2">
-                    <Award
-                      size={20}
-                      className="text-accent mt-1 flex-shrink-0"
-                    />
-                    <div>
-                      <h3 className="font-serif text-lg font-semibold text-foreground">
-                        {cert.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        {cert.issuer}
-                      </p>
-                      <span className="inline-block mt-2 text-xs px-2 py-1 rounded-full bg-primary/10 text-primary font-medium">
-                        {cert.year}
-                      </span>
-                    </div>
-                  </div>
+                <div>
+                  <h3 className="font-serif text-lg font-semibold text-foreground">
+                    {cert.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    {cert.issuer}
+                  </p>
+                  <span className="inline-block mt-3 text-xs px-3 py-1 rounded-full bg-primary/10 text-primary font-medium">
+                    {cert.year}
+                  </span>
                   <p className="text-sm text-muted-foreground mt-3">
                     {cert.description}
                   </p>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-2 mt-4">
+                  <div className="flex gap-2 mt-5">
                     {cert.image && (
                       <>
                         <Button
