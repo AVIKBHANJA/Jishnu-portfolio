@@ -1,13 +1,29 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { FlaskConical, Cpu, Dna, Lightbulb, Users, Palette, Globe2, GraduationCap } from "lucide-react";
+import {
+  FlaskConical,
+  Cpu,
+  Dna,
+  Lightbulb,
+  Users,
+  Palette,
+  Globe2,
+  GraduationCap,
+} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const skillCategories = [
   {
     icon: FlaskConical,
     title: "Laboratory",
-    skills: ["iPSC Culture", "Western Blotting", "SDS-PAGE", "ELISA", "qRT-PCR", "Confocal Microscopy"],
+    skills: [
+      "iPSC Culture",
+      "Western Blotting",
+      "SDS-PAGE",
+      "ELISA",
+      "qRT-PCR",
+      "Confocal Microscopy",
+    ],
   },
   {
     icon: Cpu,
@@ -17,12 +33,60 @@ const skillCategories = [
   {
     icon: Dna,
     title: "Molecular Biology",
-    skills: ["Immunocytochemistry", "DNA/RNA Isolation", "Gel Electrophoresis", "Histological Staining", "PCR Techniques"],
+    skills: [
+      "Immunocytochemistry",
+      "DNA/RNA Isolation",
+      "Gel Electrophoresis",
+      "Histological Staining",
+      "PCR Techniques",
+    ],
   },
   {
     icon: Lightbulb,
     title: "Research",
-    skills: ["Scientific Writing", "Data Analysis", "Literature Review", "GLP", "Animal Handling"],
+    skills: [
+      "Scientific Writing",
+      "Data Analysis",
+      "Literature Review",
+      "GLP",
+      "Animal Handling",
+    ],
+  },
+];
+
+const studyAbroadGuide = [
+  {
+    number: "1",
+    title: "How to find a prospective supervisor?",
+    subItems: ["1.1. How to send Cold Emails?"],
+  },
+  {
+    number: "2",
+    title: "Creating CV guidelines",
+  },
+  {
+    number: "3",
+    title: "English language proficiency certificate",
+  },
+  {
+    number: "4",
+    title: "How can you seek an application fee waiver?",
+  },
+  {
+    number: "5",
+    title: "How to apply?",
+  },
+  {
+    number: "6",
+    title: "How to write a Motivation letter?",
+  },
+  {
+    number: "7",
+    title: "How to find a research gap?",
+  },
+  {
+    number: "8",
+    title: "How to write a Research proposal (for PhD)",
   },
 ];
 
@@ -108,28 +172,45 @@ export const SkillsSection = () => {
 
           {/* Soft Skills & Languages */}
           <div className="grid lg:grid-cols-3 gap-8">
-            {/* Soft Skills */}
+            {/* Study Abroad Helpdesk */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.5 }}
               className="lg:col-span-2"
             >
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-6">
-                Soft Skills & Leadership
+              <h3 className="font-serif text-2xl font-bold text-foreground mb-6">
+                Study Abroad Helpdesk
               </h3>
               <div className="grid sm:grid-cols-2 gap-4">
-                {softSkills.map((skill, index) => (
+                {studyAbroadGuide.map((item) => (
                   <div
-                    key={skill.title}
-                    className="flex items-start gap-3 p-4 rounded-lg bg-card shadow-soft"
+                    key={item.number}
+                    className="p-4 rounded-lg bg-card shadow-soft"
                   >
-                    <div className="p-2 rounded-lg bg-accent/10">
-                      <skill.icon size={18} className="text-accent" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-foreground text-sm">{skill.title}</h4>
-                      <p className="text-xs text-muted-foreground mt-1">{skill.description}</p>
+                    <div className="flex gap-3">
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
+                        <span className="text-sm font-semibold text-primary">
+                          {item.number}
+                        </span>
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-foreground text-lg">
+                          {item.title}
+                        </h4>
+                        {item.subItems && (
+                          <ul className="mt-2 space-y-1 ml-2">
+                            {item.subItems.map((subItem, idx) => (
+                              <li
+                                key={idx}
+                                className="text-xs text-muted-foreground pl-2 border-l border-accent/30"
+                              >
+                                {subItem}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -147,15 +228,24 @@ export const SkillsSection = () => {
               </h3>
               <div className="space-y-4">
                 {languages.map((lang) => (
-                  <div key={lang.name} className="p-4 rounded-lg bg-card shadow-soft">
+                  <div
+                    key={lang.name}
+                    className="p-4 rounded-lg bg-card shadow-soft"
+                  >
                     <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-foreground">{lang.name}</span>
-                      <span className="text-xs text-muted-foreground">{lang.level}</span>
+                      <span className="font-medium text-foreground">
+                        {lang.name}
+                      </span>
+                      <span className="text-xs text-muted-foreground">
+                        {lang.level}
+                      </span>
                     </div>
                     <div className="h-2 bg-secondary rounded-full overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
-                        animate={isInView ? { width: `${lang.proficiency}%` } : {}}
+                        animate={
+                          isInView ? { width: `${lang.proficiency}%` } : {}
+                        }
                         transition={{ duration: 1, delay: 0.8 }}
                         className="h-full bg-gradient-to-r from-primary to-accent rounded-full"
                       />
