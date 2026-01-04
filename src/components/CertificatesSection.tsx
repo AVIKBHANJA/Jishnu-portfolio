@@ -15,8 +15,8 @@ const certificates = [
     issuer: "Tempus Public Foundation",
     year: "2025",
     description: "Full scholarship for PhD studies at University of Szeged",
-    image: "/assets/Screenshot 2026-01-03 160055.png",
-    pdf: null,
+    image: null,
+    pdf: "/assets/Stipendium Hungaricum Scholarship.pdf",
   },
   {
     title: "Statement of Supervisor/Declaration of Acceptance ",
@@ -32,8 +32,8 @@ const certificates = [
     issuer: "Heritage Institute of Technology",
     year: "2025",
     description: "CGPA: 9.78/10 - Biotechnology",
-    image: "/assets/MTech Transcript_1.jpg",
-    pdf: null,
+    image: null,
+    pdf: "/assets/MTech Transcript_1.pdf",
   },
   {
     title: "MSc and BSc Degrees",
