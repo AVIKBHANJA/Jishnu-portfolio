@@ -42,7 +42,30 @@ const certificates = [
     description: "M.Sc & B.Sc in Biotechnology and Zoology",
     image: null,
     pdf: "/assets/MSc and BSc Degree.pdf",
+  },  {
+    title: "GATE BT 2025 Qualification",
+    issuer: "IIT Roorkee / GATE",
+    year: "2025",
+    description: "Qualified GATE Biotechnology 2025",
+    image: null,
+    pdf: "/assets/GATE BT 2025.pdf",
   },
+  {
+    title: "Letter of Recommendation - N.K. Jana",
+    issuer: "N.K. Jana",
+    year: "2025",
+    description: "Recommendation letter for PhD application",
+    image: null,
+    pdf: "/assets/Jishnu Sarathi Deb-LOR N.K.Jana for PhD-2025.pdf",
+  },
+  {
+    title: "Koustubh Panda Certificate",
+    issuer: "Prof. Koustubh Panda",
+    year: "2025",
+    description: "Certificate from Prof. Koustubh Panda",
+    image: null,
+    pdf: "/assets/Koustubh Panda Certificate.pdf",
+  }
 ];
 
 export const CertificatesSection = () => {
