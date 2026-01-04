@@ -1,7 +1,14 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { GraduationCap, MapPin, Trophy } from "lucide-react";
+import { GraduationCap, MapPin, Trophy, Award } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const education = [
   {
@@ -51,6 +58,18 @@ const awards = [
     title: "GATE 2024 Qualified",
     issuer: "Biotechnology (BT) & Life Science (XL) | IISc Bengaluru",
   },
+];
+
+const institutionHighlights = [
+  "One of the largest research universities in Europe, with world RANK 401 (Shanghai/ARWU Ranking).",
+  "SZTE has been home to Nobel Laureates such as Albert Szent-György (1937) and Katalin Karikó (2023)",
+  "HUN-REN BRC were also acknowledged by the European Molecular Biological Organisation (EMBO)",
+  "The European Union awarded the title of 'Centre of Excellence' to HUN-REN BRC.",
+];
+
+const institutionImages = [
+  { src: "/assets/HUN-REN BRC.jpeg", alt: "HUN-REN BRC Research Center" },
+  { src: "/assets/SZTE.JPG", alt: "University of Szeged" },
 ];
 
 export const EducationSection = () => {
@@ -146,6 +165,66 @@ export const EducationSection = () => {
               </div>
             </motion.div>
           </div>
+
+          {/* Institution Highlights */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="mt-12"
+          >
+            <div className="bg-card rounded-xl p-8 shadow-card border border-transparent dark:border-border">
+              <h3 className="font-serif text-2xl font-semibold text-foreground mb-6 flex items-center gap-2">
+                <Award size={24} className="text-accent" />
+                My Institution & University
+              </h3>
+
+              <div className="grid lg:grid-cols-2 gap-8 items-center">
+                {/* Highlights List */}
+                <div className="space-y-4">
+                  {institutionHighlights.map((highlight, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={isInView ? { opacity: 1, x: 0 } : {}}
+                      transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+                      className="flex items-start gap-3"
+                    >
+                      <div className="mt-1 w-2 h-2 rounded-full bg-accent flex-shrink-0" />
+                      <p className="text-sm text-muted-foreground leading-relaxed">{highlight}</p>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Image Carousel */}
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                >
+                  <Carousel className="w-full max-w-lg mx-auto">
+                    <CarouselContent>
+                      {institutionImages.map((image, index) => (
+                        <CarouselItem key={index}>
+                          <div className="p-1">
+                            <div className="rounded-lg overflow-hidden shadow-lg">
+                              <img
+                                src={image.src}
+                                alt={image.alt}
+                                className="w-full h-64 object-cover"
+                              />
+                            </div>
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                  </Carousel>
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
