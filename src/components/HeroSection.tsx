@@ -5,6 +5,8 @@ import {
   Mail,
   FileText,
   GraduationCap,
+  Users,
+  Book,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -130,23 +132,24 @@ export const HeroSection = () => {
               duration: 0.6,
               delay: 1,
             }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
+            className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-3 max-w-2xl mx-auto mb-8"
           >
             <Button
               size="lg"
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground gap-2 px-8"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground gap-2 px-6 text-sm sm:text-base"
               onClick={() =>
                 document.querySelector("#education")?.scrollIntoView({
                   behavior: "smooth",
                 })
               }
             >
+              <Book size={18} />
               Education
             </Button>
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2 px-8"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2 px-6 text-sm sm:text-base"
               onClick={() =>
                 document.querySelector("#publications")?.scrollIntoView({
                   behavior: "smooth",
@@ -159,11 +162,20 @@ export const HeroSection = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground gap-2 px-8"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground gap-2 px-6 text-sm sm:text-base"
+              onClick={() => navigate("/referees")}
+            >
+              <Users size={18} />
+              Referees
+            </Button>{" "}
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2 px-6 text-sm sm:text-base"
               onClick={() => navigate("/study-abroad-helpdesk")}
             >
               <GraduationCap size={18} />
-              Study Abroad Helpdesk
+              Study Abroad
             </Button>
           </motion.div>
 
