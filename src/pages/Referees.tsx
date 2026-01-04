@@ -15,7 +15,7 @@ interface Referee {
 
 const referees: Referee[] = [
   {
-    name: "Prof. Dr. Melinda Katalin Pirity",
+    name: "Prof. (Dr.) Melinda Katalin Pirity",
     role: "Doctoral Thesis Supervisor",
     currentPosition: "Senior Research Associate",
     institution: "Institute of Genetics, HUN-REN Biological Research Center Szeged",
@@ -49,7 +49,7 @@ const referees: Referee[] = [
     image: "/assets/Nandan Kumar Jana.JPG"
   },
   {
-    name: "Prof. (Dr.) Malavika Bhattacharya",
+    name: "Dr. Malavika Bhattacharya",
     role: "Associate Professor, TIU",
     currentPosition: "Associate Professor, Former Head of the Dept. Department of Biotechnology",
     institution: "Techno India University-West Bengal",
