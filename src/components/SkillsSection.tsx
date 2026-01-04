@@ -12,7 +12,7 @@ const skillCategories = [
   {
     icon: Cpu,
     title: "Computational",
-    skills: ["AlphaFold2", "BioRender", "ChemiDoc", "UV-Vis Spectrophotometer", "Microsoft Office"],
+    skills: ["AlphaFold2", "BioRender", "Microsoft Office"],
   },
   {
     icon: Dna,

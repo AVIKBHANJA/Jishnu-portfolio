@@ -6,11 +6,11 @@ import { Badge } from "@/components/ui/badge";
 const experiences = [
   {
     period: "Sep 2025 - Present",
-    title: "PhD Research Scholar",
-    organization: "HUN-REN BRC, Centre of Excellence",
+    title: "PhD Scholar",
+    organization: "HUN-REN BRC, European Union Centre of Excellence",
     location: "Szeged, Hungary",
     description: "Reprogramming PBMC to create hi-PSC, Gastruloid Differentiation, RNA isolation, qRT-PCR, Confocal Microscopy, Western Blotting, and AlphaFold2.",
-    outcome: "Ongoing research on stem cell differentiation",
+    outcome: "Ongoing research on Gene expression study of Gastruloid and iPSC differentiation.",
     tags: ["Stem Cells", "iPSC", "Confocal Microscopy"],
     current: true,
   },

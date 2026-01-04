@@ -61,11 +61,11 @@ export const AboutSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-muted-foreground leading-relaxed text-center mb-12"
           >
-            I'm a PhD scholar at HUN-REN Biological Research Centre, Hungary with a passion for 
-            understanding life at the molecular level — and expressing creativity through fine arts. 
-            With international research exposure through the Stipendium Hungaricum Fellowship, 
-            I have developed expertise in iPSC reprogramming, confocal microscopy, and molecular biology 
-            — blending analytical insight with creative intuition.
+            I'm a Research fellow at HUN-REN Biological Research Centre, with a passion for
+understanding the pattern of embryonic development, stem cell Biology and regenerative
+medicine. Here, I acquired ideas about the 3D Gastruloid model, generating iPSC by
+reprogramming and several techniques related to molecular biology.
+Previously, I worked on oxidised stress, Lung damage, inflammation and the role of Vitamins.
           </motion.p>
 
           {/* Stats */}
