@@ -103,15 +103,26 @@ export const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => handleNavClick(link)}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
-              >
-                {link.label}
-              </button>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = link.isPage
+                ? location.pathname === link.href
+                : location.pathname === "/";
+
+              return (
+                <button
+                  key={link.href}
+                  onClick={() => handleNavClick(link)}
+                  className={`text-sm font-medium transition-colors duration-200 relative group ${
+                    isActive
+                      ? "text-primary"
+                      : "text-muted-foreground hover:text-primary"
+                  }`}
+                >
+                  {link.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                </button>
+              );
+            })}
             <Button
               variant="ghost"
               size="icon"
@@ -151,15 +162,25 @@ export const Navbar = () => {
             className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border"
           >
             <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => handleNavClick(link)}
-                  className="text-left py-2 text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {link.label}
-                </button>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = link.isPage
+                  ? location.pathname === link.href
+                  : location.pathname === "/";
+
+                return (
+                  <button
+                    key={link.href}
+                    onClick={() => handleNavClick(link)}
+                    className={`text-left py-2 transition-colors ${
+                      isActive
+                        ? "text-primary font-medium"
+                        : "text-muted-foreground hover:text-primary"
+                    }`}
+                  >
+                    {link.label}
+                  </button>
+                );
+              })}
             </div>
           </motion.div>
         )}
