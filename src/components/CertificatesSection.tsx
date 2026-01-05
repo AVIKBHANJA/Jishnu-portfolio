@@ -60,10 +60,10 @@ const certificates = [
     pdf: "/assets/Jishnu Sarathi Deb-LOR N.K.Jana for PhD-2025.pdf",
   },
   {
-    title: "Koustubh Panda Certificate",
-    issuer: "Prof. Koustubh Panda",
+    title: "Prof. Dr. Koustubh Panda's certificate",
+    issuer: "Prof. Dr. Koustubh Panda",
     year: "2025",
-    description: "Certificate from Prof. Koustubh Panda",
+    description: "Certificate from Prof. Dr. Koustubh Panda",
     image: null,
     pdf: "/assets/Koustubh Panda Certificate.pdf",
   },
