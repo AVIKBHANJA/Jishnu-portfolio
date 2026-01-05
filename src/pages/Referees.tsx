@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Mail, GraduationCap, Building2, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Navbar } from "@/components/Navbar";
 
 interface Referee {
   name: string;
@@ -18,12 +19,13 @@ const referees: Referee[] = [
     name: "Prof. (Dr.) Melinda Katalin Pirity",
     role: "Doctoral Thesis Supervisor",
     currentPosition: "Senior Research Associate",
-    institution: "Institute of Genetics, HUN-REN Biological Research Center Szeged",
+    institution:
+      "Institute of Genetics, HUN-REN Biological Research Center Szeged",
     formerPositions: [
-      "Former Postdoctoral Research Associate, Department of Molecular Genetics, Albert Einstein College of Medicine, Bronx, USA"
+      "Former Postdoctoral Research Associate, Department of Molecular Genetics, Albert Einstein College of Medicine, Bronx, USA",
     ],
     email: "pirity@brc.hu",
-    image: "/assets/Melinda K.jpg"
+    image: "/assets/Melinda K.jpg",
   },
   {
     name: "Prof. (Dr.) Koustubh Panda",
@@ -31,10 +33,10 @@ const referees: Referee[] = [
     currentPosition: "Professor, Department of Biotechnology",
     institution: "University of Calcutta, Kolkata, INDIA",
     formerPositions: [
-      "Former Assistant Professor: Department of Immunology & Pathobiology, Lerner Research Institute, Cleveland Clinic Foundation, USA"
+      "Former Assistant Professor: Department of Immunology & Pathobiology, Lerner Research Institute, Cleveland Clinic Foundation, USA",
     ],
     email: "kpbcg@caluniv.ac.in",
-    image: "/assets/Koustubh Panda.jpg"
+    image: "/assets/Koustubh Panda.jpg",
   },
   {
     name: "Prof. (Dr.) Nandan Kumar Jana",
@@ -43,22 +45,23 @@ const referees: Referee[] = [
     institution: "Heritage Institute of Technology, Kolkata, INDIA",
     formerPositions: [
       "PhD from BOSE INSTITUTE",
-      "Post Doc. (UCONN Health-Centre, Farmington, CT, and UNC at Chapel Hill, NC, USA)"
+      "Post Doc. (UCONN Health-Centre, Farmington, CT, and UNC at Chapel Hill, NC, USA)",
     ],
     email: "nandankumar.jana@heritageit.edu",
-    image: "/assets/Nandan Kumar Jana.JPG"
+    image: "/assets/Nandan Kumar Jana.JPG",
   },
   {
     name: "Dr. Malavika Bhattacharya",
     role: "Associate Professor, TIU",
-    currentPosition: "Associate Professor, Former Head of the Dept. Department of Biotechnology",
+    currentPosition:
+      "Associate Professor, Former Head of the Dept. Department of Biotechnology",
     institution: "Techno India University-West Bengal",
     formerPositions: [
       "Former PhD fellow in the National Institute of Immunology, INDIA",
-      "Former Post Doc. fellow of University of Pennsylvania, USA"
+      "Former Post Doc. fellow of University of Pennsylvania, USA",
     ],
     email: "malavika.b@technoindiaeducation.com",
-    image: "/assets/Malavika-Bhattacharya.webp"
+    image: "/assets/Malavika-Bhattacharya.webp",
   },
   {
     name: "Dr. Sirshendu Chatterjee",
@@ -66,35 +69,18 @@ const referees: Referee[] = [
     currentPosition: "Associate Professor, Department of Biotechnology",
     institution: "Techno India University, Salt Lake Sector V, Kolkata-700091",
     formerPositions: [
-      "Ex-Scientist (Analytical Biochemist), Quality Control Lab, Tea Board of India"
+      "Ex-Scientist (Analytical Biochemist), Quality Control Lab, Tea Board of India",
     ],
     email: "sirshendu.chatterjee@gmail.com",
-    image: "/assets/Sirshendu Chatterjee.jpeg"
-  }
+    image: "/assets/Sirshendu Chatterjee.jpeg",
+  },
 ];
 
 const Referees = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <motion.header
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="bg-background/90 backdrop-blur-md border-b border-border sticky top-0 z-50"
-      >
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link to="/">
-              <Button variant="ghost" className="gap-2 text-muted-foreground hover:text-primary">
-                <ArrowLeft size={20} />
-                Back to Home
-              </Button>
-            </Link>
-            <h1 className="font-serif text-xl font-semibold text-foreground">Referees</h1>
-          </div>
-        </div>
-      </motion.header>
+      <Navbar />
+
 
       {/* Main Content */}
       <main className="container mx-auto px-6 py-16">
@@ -108,7 +94,8 @@ const Referees = () => {
             Professional References
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Distinguished academics and researchers who have supervised and mentored my work
+            Distinguished academics and researchers who have supervised and
+            mentored my work
           </p>
         </motion.div>
 
@@ -144,19 +131,32 @@ const Referees = () => {
 
                   <div className="space-y-3 mb-4">
                     <div className="flex items-start gap-3 justify-center md:justify-start">
-                      <Building2 size={18} className="text-accent flex-shrink-0 mt-1" />
+                      <Building2
+                        size={18}
+                        className="text-accent flex-shrink-0 mt-1"
+                      />
                       <div>
-                        <p className="text-foreground font-medium">{referee.currentPosition}</p>
-                        <p className="text-muted-foreground">{referee.institution}</p>
+                        <p className="text-foreground font-medium">
+                          {referee.currentPosition}
+                        </p>
+                        <p className="text-muted-foreground">
+                          {referee.institution}
+                        </p>
                       </div>
                     </div>
 
                     {referee.formerPositions.length > 0 && (
                       <div className="flex items-start gap-3 justify-center md:justify-start">
-                        <GraduationCap size={18} className="text-accent flex-shrink-0 mt-1" />
+                        <GraduationCap
+                          size={18}
+                          className="text-accent flex-shrink-0 mt-1"
+                        />
                         <div className="space-y-1">
                           {referee.formerPositions.map((position, idx) => (
-                            <p key={idx} className="text-muted-foreground text-sm">
+                            <p
+                              key={idx}
+                              className="text-muted-foreground text-sm"
+                            >
                               {position}
                             </p>
                           ))}
@@ -185,7 +185,8 @@ const Referees = () => {
       <footer className="border-t border-border py-8">
         <div className="container mx-auto px-6 text-center">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Jishnu Sarathi Deb. All rights reserved.
+            © {new Date().getFullYear()} Jishnu Sarathi Deb. All rights
+            reserved.
           </p>
         </div>
       </footer>
