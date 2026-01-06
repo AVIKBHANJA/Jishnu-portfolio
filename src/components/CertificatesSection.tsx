@@ -20,7 +20,7 @@ const certificates = [
   },
   {
     title: "Statement of Supervisor/Declaration of Acceptance ",
-    issuer: "Dr. Melinda Pivity, Biological Research Centre",
+    issuer: "Dr. Melinda Katalin Pirity, Biological Research Centre",
     year: "2024",
     description:
       "PhD supervision acceptance from HUN-REN BRC Institute of Genetics",
