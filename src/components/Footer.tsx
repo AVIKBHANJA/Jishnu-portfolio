@@ -15,12 +15,14 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full hover:bg-primary/10 transition-colors"
+              aria-label="Visit LinkedIn profile"
             >
               <Linkedin size={18} className="text-muted-foreground hover:text-primary" />
             </a>
             <a
               href="mailto:jishnusarathi@gmail.com"
               className="p-2 rounded-full hover:bg-primary/10 transition-colors"
+              aria-label="Send email to jishnusarathi@gmail.com"
             >
               <Mail size={18} className="text-muted-foreground hover:text-primary" />
             </a>

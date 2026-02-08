@@ -60,8 +60,11 @@ const institutionHighlights = [
 ];
 
 const institutionImages = [
-  { src: "/assets/HUN-REN BRC.jpeg", alt: "HUN-REN BRC Research Center" },
-  { src: "/assets/SZTE.JPG", alt: "University of Szeged" },
+  { src: "/assets/HUN-REN BRC.webp", alt: "HUN-REN BRC Research Center" },
+  { src: "/assets/SZTE.webp", alt: "University of Szeged" },
+  { src: "/assets/BRC-entrance.webp", alt: "Biological Research Centre entrance, Szeged" },
+  { src: "/assets/SZTE-winter.webp", alt: "University of Szeged campus in winter" },
+  { src: "/assets/SZTE-summer.webp", alt: "University of Szeged campus in summer" },
 ];
 
 export const EducationSection = () => {
@@ -204,14 +207,17 @@ export const EducationSection = () => {
                                 src={image.src}
                                 alt={image.alt}
                                 className="w-full h-64 object-cover"
+                                loading="lazy"
+                                width={600}
+                                height={256}
                               />
                             </div>
                           </div>
                         </CarouselItem>
                       ))}
                     </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
+                    <CarouselPrevious aria-label="Previous institution image" />
+                    <CarouselNext aria-label="Next institution image" />
                   </Carousel>
                 </motion.div>
               </div>

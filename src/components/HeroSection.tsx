@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import heroBiotech from "@/assets/hero-biotech.png";
+import heroBiotech from "@/assets/hero-biotech.webp";
 export const HeroSection = () => {
   const navigate = useNavigate();
 
@@ -199,7 +199,7 @@ export const HeroSection = () => {
               duration: 0.6,
               delay: 1.2,
             }}
-            className="flex items-center justify-center mb-24 md:mb-20"
+            className="flex items-center justify-center mb-32 md:mb-28 lg:mb-24"
           >
             <Button
               size="lg"

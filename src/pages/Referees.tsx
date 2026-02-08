@@ -25,7 +25,7 @@ const referees: Referee[] = [
       "Former Postdoctoral Research Associate, Department of Molecular Genetics, Albert Einstein College of Medicine, Bronx, USA",
     ],
     email: "pirity@brc.hu",
-    image: "/assets/Melinda K.jpg",
+    image: "/assets/Melinda K.webp",
   },
   {
     name: "Prof. (Dr.) Koustubh Panda",
@@ -36,7 +36,7 @@ const referees: Referee[] = [
       "Former Assistant Professor: Department of Immunology & Pathobiology, Lerner Research Institute, Cleveland Clinic Foundation, USA",
     ],
     email: "kpbcg@caluniv.ac.in",
-    image: "/assets/Koustubh Panda.jpg",
+    image: "/assets/Koustubh Panda.webp",
   },
   {
     name: "Prof. (Dr.) Nandan Kumar Jana",
@@ -48,7 +48,7 @@ const referees: Referee[] = [
       "Post Doc. (UCONN Health-Centre, Farmington, CT, and UNC at Chapel Hill, NC, USA)",
     ],
     email: "nandankumar.jana@heritageit.edu",
-    image: "/assets/Nandan Kumar Jana.JPG",
+    image: "/assets/Nandan Kumar Jana.webp",
   },
   {
     name: "Dr. Malavika Bhattacharya",
@@ -72,7 +72,7 @@ const referees: Referee[] = [
       "Ex-Scientist (Analytical Biochemist), Quality Control Lab, Tea Board of India",
     ],
     email: "sirshendu.chatterjee@gmail.com",
-    image: "/assets/Sirshendu Chatterjee.jpeg",
+    image: "/assets/Sirshendu Chatterjee.webp",
   },
 ];
 
@@ -116,6 +116,9 @@ const Referees = () => {
                       src={referee.image}
                       alt={referee.name}
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      width={160}
+                      height={160}
                     />
                   </div>
                 </div>

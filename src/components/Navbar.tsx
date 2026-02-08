@@ -97,6 +97,7 @@ export const Navbar = () => {
             }}
             className="font-serif text-2xl font-semibold text-foreground cursor-pointer"
             whileHover={{ scale: 1.02 }}
+            aria-label="Go to homepage"
           >
             Jishnu.
           </motion.button>
@@ -128,6 +129,7 @@ export const Navbar = () => {
               size="icon"
               onClick={toggleDarkMode}
               className="text-muted-foreground hover:text-primary"
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </Button>
@@ -140,6 +142,7 @@ export const Navbar = () => {
               size="icon"
               onClick={toggleDarkMode}
               className="text-muted-foreground hover:text-primary"
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </Button>
@@ -147,6 +150,7 @@ export const Navbar = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
