@@ -199,7 +199,7 @@ export const HeroSection = () => {
               duration: 0.6,
               delay: 1.2,
             }}
-            className="flex items-center justify-center mb-24 md:mb-12"
+            className="flex items-center justify-center mb-24 md:mb-20"
           >
             <Button
               size="lg"
@@ -220,7 +220,7 @@ export const HeroSection = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 1.4 }}
         onClick={scrollToAbout}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors cursor-pointer z-10"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors cursor-pointer z-10"
       >
         <span className="text-xs uppercase tracking-widest text-center">
           Scroll to explore

@@ -1,73 +1,48 @@
-# Welcome to your Lovable project
+# Jishnu Sarathi Deb - Portfolio
 
-## Project info
+Personal academic portfolio for **Jishnu Sarathi Deb**, a Research Scholar in Stem Cell Biology currently pursuing a PhD at HUN-REN Biological Research Centre, Szeged, Hungary.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## About
 
-## How can I edit this code?
+This portfolio showcases Jishnu's academic journey, research experience, publications, and skills in the field of biotechnology and stem cell biology. It includes a comprehensive study abroad helpdesk for students looking to pursue higher education internationally.
 
-There are several ways of editing your application.
+## Sections
 
-**Use Lovable**
+- **Hero** - Introduction with animated text and resume download
+- **About** - Bio, academic stats (9.78 CGPA, 2+ publications, 3+ projects, 1 fellowship), and key highlights
+- **Experience** - Research timeline including PhD at HUN-REN BRC (Hungary), Project/Research Assistant at University of Calcutta, and Teaching Assistant at Techno India University
+- **Education** - M.Tech in Biotechnology, M.Sc in Biotechnology, and B.Sc (Hons.) Zoology
+- **Publications** - Research papers and conference presentations
+- **Skills** - Laboratory techniques (iPSC Culture, Western Blotting, qRT-PCR, Confocal Microscopy), computational tools, molecular biology, and research skills
+- **Certificates & Degrees** - Downloadable credentials including Stipendium Hungaricum Scholarship and GATE qualification
+- **Contact** - Contact information and CV download
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Additional Pages
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Referees** (`/referees`) - Professional references with detailed academic backgrounds
+- **Study Abroad Helpdesk** (`/study-abroad-helpdesk`) - Comprehensive guide covering supervisor search, CV creation, language proficiency, application process, motivation letters, and research proposals
 
-**Use your preferred IDE**
+## Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Shadcn UI
+- Framer Motion
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Getting Started
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Install dependencies
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Contact
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- **Email:** jishnusarathi@gmail.com
+- **Institutional Email:** deb.jishnu@brc.hu
+- **LinkedIn:** [linkedin.com/in/jishnu-sarathi-deb-016844214](https://linkedin.com/in/jishnu-sarathi-deb-016844214)

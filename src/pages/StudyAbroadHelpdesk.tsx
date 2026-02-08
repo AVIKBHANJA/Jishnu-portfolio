@@ -17,7 +17,10 @@ const studyAbroadGuide = [
     number: "1",
     title: "How to find a prospective supervisor?",
     icon: Search,
-    subItems: ["1.1. How to send Cold Emails?"],
+    subItems: [
+      "1.1. How to send Cold Emails?",
+      "1.2. Learning email writing skill for application",
+    ],
   },
   {
     number: "2",
@@ -28,6 +31,10 @@ const studyAbroadGuide = [
     number: "3",
     title: "English language proficiency certificate",
     icon: Globe,
+    subItems: [
+      "IELTS band 6.5, with no band less than 6",
+      "TOEFL iBT score 80-93",
+    ],
   },
   {
     number: "4",
@@ -38,6 +45,10 @@ const studyAbroadGuide = [
     number: "5",
     title: "How to apply?",
     icon: BookOpen,
+    subItems: [
+      "Searching several websites, application guidelines",
+      "Eligibility criteria-based shortlisting",
+    ],
   },
   {
     number: "6",
@@ -48,11 +59,20 @@ const studyAbroadGuide = [
     number: "7",
     title: "How to find a research gap?",
     icon: Lightbulb,
+    subItems: [
+      "Summary creation from multiple research articles",
+      "Exploring novel ideas for the domain of interest",
+    ],
   },
   {
     number: "8",
     title: "How to write a Research proposal (for PhD)",
     icon: FileText,
+    subItems: [
+      "Literature review writing",
+      "Graphical abstract design",
+      "Using BioRender for experimental plan creation",
+    ],
   },
 ];
 
@@ -73,6 +93,9 @@ const StudyAbroadHelpdesk = () => {
             <div className="flex items-center justify-center gap-3 mb-4">
               <GraduationCap size={40} className="text-primary" />
             </div>
+            <span className="inline-block px-4 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium mb-3">
+              Helpdesk
+            </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-4">
               Study Abroad Helpdesk
             </h1>

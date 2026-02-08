@@ -12,14 +12,6 @@ import {
 
 const education = [
   {
-    period: "2025 - Present",
-    degree: "PhD in Stem Cell Biology",
-    institution: "HUN-REN BRC, University of Szeged",
-    location: "Szeged, Hungary",
-    details: "Stipendium Hungaricum Fellowship | Embryonic and Induced Pluripotent Stem Cell Research",
-    current: true,
-  },
-  {
     period: "2023 - 2025",
     degree: "M.Tech in Biotechnology",
     institution: "Heritage Institute of Technology",

@@ -18,6 +18,12 @@ const contactInfo = [
     href: "mailto:jishnusarathi@gmail.com",
   },
   {
+    icon: Mail,
+    label: "Institutional Email",
+    value: "deb.jishnu@brc.hu",
+    href: "mailto:deb.jishnu@brc.hu",
+  },
+  {
     icon: Linkedin,
     label: "LinkedIn",
     value: "linkedin.com/in/jishnu-sarathi-deb",
